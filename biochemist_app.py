@@ -36,7 +36,7 @@ h3 {
  )
 
 
-lab_pic = 'IMG_5245 (1).png'
+lab_pic = 'IMG_5254 (1).png'
 col1, col2 = st.columns([3, 5])
 with col1:
     st.image(lab_pic, width=300)
