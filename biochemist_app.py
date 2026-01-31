@@ -10,7 +10,7 @@ import pandas as pd
 import os
 import streamlit as st
 
-df = pd.read_csv(r'/Users/courtneybrown/Library/Mobile Documents/com~apple~CloudDocs/PhD/CHPC CSS/Streamlit/Biochemist)app/molecule_analysis.csv')
+df = pd.read_csv('molecule_analysis.csv')
 
 st.markdown(
  """
@@ -66,7 +66,7 @@ if filtered_df.empty:
 else:
     cols = st.columns(3)
     
-image_folder = r'/Users/courtneybrown/Library/Mobile Documents/com~apple~CloudDocs/PhD/CHPC CSS/Streamlit/Biochemist)app/mol_images'
+image_folder = 'mol_images'
 
 for index, row in filtered_df.iterrows():
     with cols[index % 3]:
@@ -75,8 +75,8 @@ for index, row in filtered_df.iterrows():
         st.markdown(f"<h3 style='color: purple; '>{row['Name']}</h3>", unsafe_allow_html=True)
         st.write(f"**This molecule is involved in:** {row['Category']}")
         
-        if os.path.exists(img_path):
-                st.image(img_path, use_container_width=True)
+      
+        st.image(img_path, use_container_width=True)
         
         st.write(f"**Formula:** {row['Formula']}")
         st.write(f"**Molecular Weight:** {row['MW']}")
