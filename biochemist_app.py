@@ -68,8 +68,7 @@ else:
 image_folder = 'mol_images'
 
 for i, (index, row) in enumerate(filtered_df.iterrows()):
-
-        with cols[i % 3]:
+    with cols[i % 3]:
         img_path = os.path.join(image_folder, f"{row['Name']}.png")
         
         st.markdown(f"<h3 style='color: purple; '>{row['Name']}</h3>", unsafe_allow_html=True)
