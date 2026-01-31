@@ -36,8 +36,7 @@ h3 {
  )
 
 
-lab_pic = r'/Users/courtneybrown/Library/Mobile Documents/com~apple~CloudDocs/PhD/CHPC CSS/Streamlit/my_app/IMG_5254 (1).png'
-
+lab_pic = 'IMG_5245 (1).png'
 col1, col2 = st.columns([3, 5])
 with col1:
     st.image(lab_pic, width=300)
